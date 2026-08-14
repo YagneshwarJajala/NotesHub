@@ -1,3 +1,37 @@
+/* THEME-TOGGLER */
+
+const theme=document.getElementById('theme-toggle');
+theme.addEventListener("click",function(){
+    if(document.body.dataset.theme === "dark"){
+        document.body.removeAttribute("data-theme");
+    }
+    else{
+        document.body.dataset.theme="dark";
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let subject=document.getElementsByClassName('subject-btn');
 let expandedcard=document.querySelector('.subjects-card-expanded');
 let subjectcard=document.querySelector('.subjects-card');

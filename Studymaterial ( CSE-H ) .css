@@ -48,7 +48,105 @@
     
     --popup-card-border: rgba(255, 255, 255, 0.9);
 
+    /* CHNAGED ATTRIBUTES FOR LIGHT THEME */
+
+    --subject-btn-color: #334155;
+
+    --subject-btn-bg: #f8fafc;
+
+    --subject-btn-hover-bg: #2563eb;
+
+    --subject-btn-hover-boxshadow: 0 18px 35px rgba(37,99,235,0.25); 
+
+    --header-bg: rgba(255,255,255,.88);
+
 }
+
+/* ------------------- DARK THEME ------------------ */
+
+[data-theme="dark"]{
+
+    /* ---------- BACKGROUND ---------- */
+
+    --body-bg: #050505;
+
+    --surface-bg: #111214;
+
+    --card-bg: #3a3b3d;
+
+
+    /* ---------- TEXT ---------- */
+
+    --heading-color: #f5f5f5;
+
+    --text-color: #e6e6e6;
+
+    --text-secondary: #b8b8b8;
+
+    --text-card: #f2f2f2;
+
+
+    /* ---------- PRIMARY / GOLD ---------- */
+
+    --primary-color: #d4af37;
+
+    --primary-light: #f0c75e;
+
+
+    /* ---------- BORDERS ---------- */
+
+    --border-color: rgba(212, 175, 55, 0.55);
+
+    --header-border: rgba(212, 175, 55, 0.30);
+
+
+    /* ---------- OVERLAY ---------- */
+
+    --overlay-color: rgba(0, 0, 0, 0.72);
+
+
+    /* ---------- SHADOWS ---------- */
+
+    --shadow-card:
+        0 15px 40px rgba(0, 0, 0, 0.40);
+
+    --shadow-section:
+        0 15px 40px rgba(0, 0, 0, 0.40);
+
+    --shadow-popup-card:
+        0 28px 65px rgba(0, 0, 0, 0.70);
+
+    --shadow-primary:
+        0 18px 35px rgba(212, 175, 55, 0.20);
+
+
+    /* ---------- POPUP CARD ---------- */
+
+    --popup-card-bg: #292a2c;
+
+    --popup-card-border: rgba(212, 175, 55, 0.45);
+
+    /* CHANGED ATTRIBUTES FOR DARK MODE*/
+
+    --subject-btn-color: #FBCC13;
+
+    --subject-btn-bg: black;
+
+    --subject-btn-hover-bg: #daa520;
+
+    --subject-btn-hover-boxshadow: 
+        0 0 10px #ffd700,  
+        0 0 10px #dcdcdc,   
+        0 0 10px #f5f5f5; 
+    ;
+
+    --header-bg:black;
+}
+
+
+
+
+
 
 
 
@@ -108,7 +206,7 @@ header{
         
     height:auto;
 
-    background:rgba(255,255,255,.88);
+    background: var(--header-bg);
 
     backdrop-filter:blur(12px);
 
@@ -183,6 +281,52 @@ nav a{
 
     transition: color 250ms ease, transform 250ms ease;
 
+
+}
+
+/* ---- THEME TOGGLER ---- */ 
+
+#theme-toggle{
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+#sun-icon{
+
+    display: none;
+
+}
+
+#moon-icon{
+
+    display: block;
+
+    color: black;
+
+}
+
+[data-theme="dark"] #sun-icon{
+
+    display: block;
+
+    color: whitesmoke;
+
+}
+
+[data-theme="dark"] #moon-icon{
+
+    display: none;
 
 }
 
@@ -344,7 +488,7 @@ main{
 
     text-decoration:none;
 
-    color: var(--text-card);
+    color: var(--subject-btn-color);
 
     font-weight:600;
 
@@ -352,7 +496,7 @@ main{
 
     padding:20px;
 
-    background:var(--card-bg);
+    background: var(--subject-btn-bg);
 
     border:1px solid var(--border-color);
 
@@ -374,13 +518,11 @@ main{
 
     transform:translateY(-6px);
 
-    background:var(--primary-color);
+    background: var(--subject-btn-hover-bg);
 
     color: var(--surface-bg);
 
-    box-shadow:
-
-    0 18px 35px var(--shadow-primary);
+    box-shadow: var(--subject-btn-hover-boxshadow);
 
 }
 
