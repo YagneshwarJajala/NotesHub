@@ -26,7 +26,118 @@
 
     --shadow_light: rgba(255,255,255,0.9);
 
+    /* CHANGED ATTRIBUTES FOR LIGHT THEME */
+
+    --body-color: #5174b4;
+
+    --header-bg: rgba(255,255,255,.55);
+
+    --header-border: rgba(255,255,255,.7);
+
+    --header-box-shadow:
+
+    10px 10px 25px rgba(163,177,198,.35),
+
+    -8px -8px 18px rgba(255,255,255,.9);
+
+    --classes-box-shadow:
+
+    12px 12px 30px var(rgba(163,177,198,0.35)),
+
+    -10px -10px 20px var(rgba(255,255,255,0.9));
+
+    --classes-a-box-shadow:
+
+    8px 8px 16px #bbbdbf,
+
+    -8px -8px 16px #ffffff;
+
+    --classes-a-hover-color: white;
+
+    --classes-a-hover-box-shadow: 0 15px 30px rgba(37,99,235,.35);
+
+    --footer-border: rgba(255,255,255,.8);
+
+    --classes-mark: white;
+
+    --footer-bg: rgba(255,255,255,.55);
+
+    --footer-box-shadow:
+    10px 10px 25px rgba(163,177,198,.2),
+
+    -8px -8px 20px white;
+
 }
+
+/* ------------------- DARK THEME ------------------ */
+
+[data-theme="dark"]{
+
+    --body_bg_before: #fbcd138e;
+
+    --body_bg_after: #fbcd136c;
+
+    --text: #FFFAFA;
+
+    --body_bg: black;
+
+    --text_primary: #E3E3E3;
+
+    --text_secondary: #FFFFFF;
+
+    --card_bg: #010507a5;
+
+    --card_border: gold;
+
+    --button_bg: black;
+
+    --shadow_dark: #fbcd138a;
+
+    --shadow_light: #cdbe8477;
+
+    /* CHANGED ATTRIBUTES FOR DARK THEME */
+
+    --body-color: #FFFAFA;
+
+    --header-bg: black;
+
+    --header-border: gold;
+
+    --header-box-shadow:
+
+    7px 7px 18px rgba(163, 177, 198, 0.138),
+
+    -8px -8px 18px rgba(0, 0, 0, 0.375);
+
+    --classes-box-shadow:
+
+    7px 7px 18px var(rgba(0, 0, 7, 0.18)),
+
+    -10px -10px 20px var(rgba(0, 0, 7, 0.45));
+
+    --classes-a-box-shadow:
+
+    7px 7px 15px #d3be243b,
+
+    -8px -8px 16px #5d502a5e;
+
+    --classes-a-hover-color: black;
+
+    --classes-a-hover-box-shadow: 0 15px 30px #FBCC13;
+
+    --footer-border: rgba(233, 181, 11, 0.8);
+
+    --classes-mark: black;
+
+    --footer-bg: black;
+
+    --footer-box-shadow:
+    10px 10px 25px rgba(163,177,198,.2),
+
+    -8px -8px 20px rgba(0, 0, 0, 0.386);
+
+}
+
 
 /* ==========================
         RESET
@@ -52,7 +163,7 @@ body{
 
     background: var(--body_bg);
 
-    color:#5174b4;
+    color: var(--body-color);
 
     overflow-x:hidden;
 
@@ -125,19 +236,15 @@ header{
 
     border-radius:22px;
 
-    background:rgba(255,255,255,.55);
+    background: var(--header-bg);
 
     backdrop-filter:blur(18px);
 
     -webkit-backdrop-filter:blur(18px);
 
-    border:1px solid rgba(255,255,255,.7);
+    border:1px solid var(--header-border);
 
-    box-shadow:
-
-    10px 10px 25px rgba(163,177,198,.35),
-
-    -8px -8px 18px rgba(255,255,255,.9);
+    box-shadow: var(--header-box-shadow);
 
 }
 
@@ -210,11 +317,7 @@ main{
 
     margin-bottom:40px;
 
-    box-shadow:
-
-    12px 12px 30px var(--shadow_dark),
-
-    -10px -10px 20px var(--shadow_light);
+    box-shadow: var(--classes-box-shadow);
 
 }
 
@@ -290,6 +393,56 @@ main{
 
 }
 
+/* ---- THEME TOGGLER ---- */ 
+
+#theme-toggle{
+
+    border: none;
+
+    background-color: rgba(0, 0, 0, 0.271);
+
+    border-radius: 25%;
+
+    margin-top: 0.34rem;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+#sun-icon{
+
+    display: none;
+
+}
+
+#moon-icon{
+
+    display: block;
+
+    color: black;
+
+}
+
+[data-theme="dark"] #sun-icon{
+
+    display: block;
+
+    color: whitesmoke;
+
+}
+
+[data-theme="dark"] #moon-icon{
+
+    display: none;
+
+}
+
 /* ==========================
         CLASS SECTION
 ========================== */
@@ -319,7 +472,7 @@ main{
 
     background: var(--text);
 
-    color:white;
+    color: var(--classes-mark);
 
     padding:5px 12px;
 
@@ -374,11 +527,7 @@ main{
 
     background:var(--button_bg);
 
-    box-shadow:
-
-    8px 8px 16px #bbbdbf,
-
-    -8px -8px 16px #ffffff;
+    box-shadow: var(--classes-a-box-shadow);
 
     transition:.35s;
 
@@ -396,11 +545,9 @@ main{
 
     background: var(--text);
 
-    color:white;
+    color: var(--classes-a-hover-color);
 
-    box-shadow:
-
-    0 15px 30px rgba(37,99,235,.35);
+    box-shadow: var(--classes-a-hover-box-shadow);
 
 }
 
@@ -420,17 +567,13 @@ footer{
 
     border-radius:18px;
 
-    background:rgba(255,255,255,.55);
+    background: var(--footer-bg);
 
     backdrop-filter:blur(15px);
 
-    border:1px solid rgba(255,255,255,.8);
+    border:1px solid var(--footer-border);
 
-    box-shadow:
-
-    10px 10px 25px rgba(163,177,198,.2),
-
-    -8px -8px 20px white;
+    box-shadow: var(--footer-box-shadow);
 
 }
 
