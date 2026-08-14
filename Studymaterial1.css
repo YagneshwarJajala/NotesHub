@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* COLOR VARIABLES */
+
+:root {
+
+    --body_bg_before: #60a5fa;
+
+    --body_bg_after: #3d4ee3;
+
+    --text: #2563eb;
+
+    --body_bg: #eef3f9;
+
+    --text_primary: #2c3e50;
+
+    --text_secondary: #64748b;
+
+    --card_bg: rgba(255, 255, 255, 0.55);
+
+    --card_border: rgba(215, 215, 215, 0.693);
+
+    --button_bg: #eef3f9;
+
+    --shadow_dark: rgba(163,177,198,0.35);
+
+    --shadow_light: rgba(255,255,255,0.9);
+
+}
+
+/* ==========================
+        RESET
+========================== */
+
+*{
+    margin:0;
+
+    padding:0;
+    
+    box-sizing :border-box;
+    
+    font-family:"Poppins",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    background: var(--body_bg);
+
+    color:#5174b4;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/* ==========================
+    BACKGROUND BLOBS
+========================== */
+
+body::before,
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.35;
+
+    z-index:-1;
+
+}
+
+body::before{
+
+    background: var(--body_bg_before);
+
+    top:-100px;
+
+    left:-80px;
+
+}
+
+body::after{
+
+    background: var(--body_bg_after);
+
+    bottom:-100px;
+
+    right:-80px;
+
+}
+
+/* ==========================
+        HEADER
+========================== */
+
+header{
+
+    width:92%;
+
+    margin:25px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    box-shadow:
+
+    10px 10px 25px rgba(163,177,198,.35),
+
+    -8px -8px 18px rgba(255,255,255,.9);
+
+}
+
+.logo h1{
+
+    color: var(--text);
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color: var(--text_secondary);
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color: var(--text);
+
+}
+
+/* ==========================
+        MAIN
+========================== */
+
+main{
+
+    width:92%;
+
+    margin:40px auto;
+
+}
+
+/* ==========================
+    COMMON SECTION STYLE
+========================== */
+
+.study-material,
+.Classes{
+
+    background: var(--card_bg);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid var(--card_border);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    margin-bottom:40px;
+
+    box-shadow:
+
+    12px 12px 30px var(--shadow_dark),
+
+    -10px -10px 20px var(--shadow_light);
+
+}
+
+/* ==========================
+    STUDY MATERIAL
+========================== */
+
+.study-material{
+
+    text-align:center;
+
+}
+
+.study-material h2{
+
+    font-size:2.8rem;
+
+    color: var(--text);
+
+    margin-bottom:20px;
+
+}
+
+/* CSS TYPEWRITER EFFECT*/
+
+#typewritereffect{
+
+    font-family: "Courier New", Courier, monospace;
+    
+    font-size: 2rem;
+
+    margin-inline: auto;
+
+    white-space: nowrap;
+
+    width: max-content;
+
+    overflow: hidden;
+
+    border-right: 2px solid;
+
+    animation: typing 3.4s steps(18) forwards, blink 1s step-end infinite;
+
+}
+
+@keyframes typing {
+
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes blink{
+     50%{
+        border-color: transparent;
+     }
+}
+
+.study-material p{
+
+    max-width:850px;
+
+    margin:15px auto;
+
+    line-height:1.9;
+
+    color:#64748b;
+
+    font-size:1.05rem;
+
+}
+
+/* ==========================
+        CLASS SECTION
+========================== */
+
+.Classes{
+
+    text-align:center;
+
+}
+
+.Classes h3{
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+}
+
+.Classes h2{
+
+    margin-top:10px;
+
+    font-weight:600;
+
+}
+
+.Classes mark{
+
+    background: var(--text);
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:8px;
+
+}
+
+
+/* ==========================
+    CLASS GRID
+========================== */
+
+.Classes ul{
+
+    margin-top:45px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+    list-style:none;
+
+}
+
+/* ==========================
+    CLASS CARD
+========================== */
+
+.Classes li{
+
+    transition:.35s;
+
+}
+
+.Classes a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color: var(--text);
+
+    font-weight:600;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:var(--button_bg);
+
+    box-shadow:
+
+    8px 8px 16px #bbbdbf,
+
+    -8px -8px 16px #ffffff;
+
+    transition:.35s;
+
+}
+
+/* Hover */
+
+.Classes a:hover{
+
+    transform:
+
+    translateY(-8px)
+
+    scale(1.03);
+
+    background: var(--text);
+
+    color:white;
+
+    box-shadow:
+
+    0 15px 30px rgba(37,99,235,.35);
+
+}
+
+/* ==========================
+        FOOTER
+========================== */
+
+footer{
+
+    width:92%;
+
+    margin:40px auto 25px;
+
+    text-align:center;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+
+    10px 10px 25px rgba(163,177,198,.2),
+
+    -8px -8px 20px white;
+
+}
+
+/* ==========================
+        SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background: var(--text);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef3f9;
+
+}
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:25px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.study-material,
+.Classes{
+
+    padding:30px;
+
+}
+
+.study-material h2{
+
+    font-size:2rem;
+
+}
+
+.Classes ul{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.Classes ul{
+
+    grid-template-columns:1fr;
+
+}
+
+.study-material h2{
+
+    font-size:1.8rem;
+
+}
+
+}
+@media(max-width:1024px){
+.Classes{
+    padding : 2rem;
+
+    }
+}    
