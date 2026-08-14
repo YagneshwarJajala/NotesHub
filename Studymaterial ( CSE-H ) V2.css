@@ -64,6 +64,20 @@
     --popup-card-bg: #292a2c;
 
     --popup-card-border: rgba(212, 175, 55, 0.45);
+
+    /* CHANGED ATTRIBUTES FOR DARK MODE*/
+
+    --subject-btn-color: #FBCC13;
+
+    --subject-btn-bg: black;
+
+    --subject-btn-hover-bg: #daa520;
+
+    --subject-btn-hover-boxshadow: 
+        0 0 10px #ffd700,  
+        0 0 10px #dcdcdc,   
+        0 0 10px #f5f5f5; 
+    ;
 }
 
 
@@ -359,7 +373,7 @@ main{
 
     text-decoration:none;
 
-    color: #FBCC13;/*changed*/
+    color: var(--subject-btn-color);
 
     font-weight:600;
 
@@ -367,7 +381,7 @@ main{
 
     padding:20px;
 
-    background: black;/*changed*/
+    background: var(--subject-btn-bg);
 
     border:2px solid var(--border-color);
 
@@ -389,14 +403,11 @@ main{
 
     transform:translateY(-6px);
 
-    background: #daa520;/*changed*/
+    background:  var(--subject-btn-hover-bg);
 
     color: var(--surface-bg);
 
-    box-shadow:
-        0 0 10px #ffd700,  /*changed*/
-        0 0 10px #dcdcdc,   
-        0 0 10px #f5f5f5; 
+    box-shadow: var(--subject-btn-hover-boxshadow);
 
 }
 
