@@ -12,25 +12,7 @@ theme.addEventListener("click",function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* SUBJECT CARD EXPANSION */
 
 let subject=document.getElementsByClassName('subject-btn');
 let expandedcard=document.querySelector('.subjects-card-expanded');
