@@ -73,7 +73,7 @@ for(let i=0;i<unitbtns.length;i++){
             e.stopPropagation();
             const unit=this.dataset.unit;
             console.log('You selected unit:'+unit);
-            const pdfpath=`pdf/${section}/${subject}/unit${unit}.pdf`;
+            const pdfpath=`${section}${subject}${unit}.pdf`;
             console.log("pdf path:"+pdfpath);
             window.open(pdfpath,"_blank");
         }
