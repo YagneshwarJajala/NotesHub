@@ -42,9 +42,9 @@
 
     --classes-box-shadow:
 
-    12px 12px 30px var(rgba(163,177,198,0.35)),
+    12px 12px 30px rgba(163,177,198,0.35),
 
-    -10px -10px 20px var(rgba(255,255,255,0.9));
+    -10px -10px 20px rgba(255,255,255,0.9);
 
     --classes-a-box-shadow:
 
@@ -111,9 +111,9 @@
 
     --classes-box-shadow:
 
-    7px 7px 18px var(rgba(0, 0, 7, 0.18)),
+    7px 7px 18px rgba(0, 0, 7, 0.18),
 
-    -10px -10px 20px var(rgba(0, 0, 7, 0.45));
+    -10px -10px 20px rgba(0, 0, 7, 0.45);
 
     --classes-a-box-shadow:
 
@@ -505,12 +505,6 @@ main{
     CLASS CARD
 ========================== */
 
-.Classes li{
-
-    transition:.35s;
-
-}
-
 .Classes a{
 
     display:block;
@@ -660,6 +654,44 @@ nav ul{
 
     font-size:1.8rem;
 
+}
+
+header,.study-material,.Classes,footer{
+    
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
+
+}
+
+body::before,body::after{
+
+    filter: blur(60px);
+
+}
+
+.Classes a{
+
+    box-shadow:  
+    4px 4px 10px rgba(163,177,198,.25),
+    -4px -4px 10px rgba(255,255,255,.7);;
+
+}
+
+@media(hover: hover){
+
+    .Classes a:hover{
+
+        transform: translateY(-7px) scale(1.05);
+
+        background: var(--text);
+
+        color: var(--classes-a-hover-color);
+
+        box-shadow: var(--classes-a-hover-box-shadow);
+
+
+    }
 }
 
 }
