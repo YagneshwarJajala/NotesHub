@@ -60,6 +60,8 @@
 
     --header-bg: rgba(255,255,255,.88);
 
+    --logo-color: #2563eb;
+
 }
 
 /* ------------------- DARK THEME ------------------ */
@@ -141,6 +143,8 @@
     ;
 
     --header-bg:black;
+
+    --logo-color: #FFFAFA;
 }
 
 
@@ -234,7 +238,7 @@ header{
 
     font-size:2rem;
 
-    color: var(--primary-color);
+    color: var(--logo-color);
 
     font-weight:700;
 
