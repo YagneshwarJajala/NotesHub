@@ -61,6 +61,11 @@ for (let i=0;i<sectionname.length;i++){
 
 /* STORING UNIT */
 const unitbtns=document.getElementsByClassName('unit-btn');
+for( let i=3;i<(unitbtns.length);i++){
+    unitbtns[i].textContent="Will be available soon";
+    unitbtns[i].disabled=true;
+    unitbtns[i].style.backgroundColor="#f5f5f553";
+}
 for(let i=0;i<unitbtns.length;i++){
 
     unitbtns[i].addEventListener("click",function(e)
@@ -70,6 +75,7 @@ for(let i=0;i<unitbtns.length;i++){
             console.log('You selected unit:'+unit);
             const pdfpath=`pdf/${section}/${subject}/unit${unit}.pdf`;
             console.log("pdf path:"+pdfpath);
+            window.open(pdfpath,"_blank");
         }
     )
 }
