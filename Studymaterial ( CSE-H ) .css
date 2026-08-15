@@ -744,7 +744,10 @@ main{
 
     transition-delay: 280ms;
 }
+.subjects-card-expanded.show li:nth-child(6){
 
+    transition-delay: 340ms;
+}
 /* ---------------- FOOTER  SPACE ---------------- */
 
 main{

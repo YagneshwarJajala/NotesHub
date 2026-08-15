@@ -20,26 +20,25 @@ theme.addEventListener("click",function(){
 
 /* SUBJECT CARD EXPANSION */
 
-let subject=document.getElementsByClassName('subject-btn');
+const subjectbtns=document.getElementsByClassName('subject-btn');
 let expandedcard=document.querySelector('.subjects-card-expanded');
 let subjectcard=document.querySelector('.subjects-card');
+let subject="";/* STORING SUBJECT NAME */
 
-console.log("Count of buttons is:"+subject.length);
+console.log("Count of buttons is:"+subjectbtns.length);
 
-for (let i=0;i<subject.length;i++){
-    subject[i].addEventListener('click',function(e){
+for (let i=0;i<subjectbtns.length;i++){
+    subjectbtns[i].addEventListener('click',function(e){
         e.stopPropagation();
-        let subject_name=this.getAttribute("data-subject");
-        console.log("You have clicked "+subject_name+" Subject.");
+        subject=this.dataset.subject;
+        console.log("You have clicked "+subject+" Subject.");
         expandedcard.classList.add("show");
         subjectcard.classList.add("open");
     });
 
 }
 expandedcard.addEventListener('click', function(e) {
-
     e.stopPropagation();
-
 });
 
 
@@ -58,4 +57,19 @@ let sectionname=document.getElementsByClassName('section-name');
 for (let i=0;i<sectionname.length;i++){
 
     sectionname[i].textContent=`${section}`;
+}
+
+/* STORING UNIT */
+const unitbtns=document.getElementsByClassName('unit-btn');
+for(let i=0;i<unitbtns.length;i++){
+
+    unitbtns[i].addEventListener("click",function(e)
+        {
+            e.stopPropagation();
+            const unit=this.dataset.unit;
+            console.log('You selected unit:'+unit);
+            const pdfpath=`pdf/${section}/${subject}/unit${unit}.pdf`;
+            console.log("pdf path:"+pdfpath);
+        }
+    )
 }
