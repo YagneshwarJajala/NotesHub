@@ -130,17 +130,14 @@
 
     /* CHANGED ATTRIBUTES FOR DARK MODE*/
 
-    --subject-btn-color: #FBCC13;
+    --subject-btn-color: #FFFAFA;
 
     --subject-btn-bg: black;
 
-    --subject-btn-hover-bg: #daa520;
+    --subject-btn-hover-bg: #ffffff;
 
     --subject-btn-hover-boxshadow: 
-        0 0 10px #ffd700,  
-        0 0 10px #dcdcdc,   
-        0 0 10px #f5f5f5; 
-    ;
+        0 0 7px #ffffffed; 
 
     --header-bg:black;
 
