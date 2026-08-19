@@ -18,7 +18,7 @@
 
     --card_bg: rgba(255, 255, 255, 0.55);
 
-    --card_border: rgba(215, 215, 215, 0.693);
+    --card_border: rgba(255,255,255,.7);
 
     --button_bg: #eef3f9;
 
@@ -600,6 +600,15 @@ footer{
 /* ==========================
         RESPONSIVE
 ========================== */
+
+@media(min-width:900px){
+
+    :root{
+
+    --card_border: rgba(215, 215, 215, 0.693);
+
+    }
+}
 
 @media(max-width:900px){
 
