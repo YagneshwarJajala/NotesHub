@@ -18,7 +18,7 @@
 
     --card_bg: rgba(255, 255, 255, 0.55);
 
-    --card_border: rgba(255,255,255,.7);
+    --card_border: rgba(215, 215, 215, 0.693);
 
     --button_bg: #eef3f9;
 
@@ -116,10 +116,9 @@
     -10px -10px 20px rgba(0, 0, 7, 0.45);
 
     --classes-a-box-shadow:
-
-    7px 7px 15px #d3be243b,
-
-    -8px -8px 16px #5d502a5e;
+    2px 2px 7px rgba(163,177,198,.25),
+    
+    -2px -2px 7px rgba(255,255,255,.7);
 
     --classes-a-hover-color: black;
 
@@ -521,9 +520,7 @@ main{
 
     background:var(--button_bg);
 
-    box-shadow:
-     2px 2px 7px rgba(163,177,198,.25),
-    -2px -2px 7px rgba(255,255,255,.7);
+    box-shadow: var(--classes-a-box-shadow);
 
     transition:.35s;
 
