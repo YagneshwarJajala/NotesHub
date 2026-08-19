@@ -73,9 +73,9 @@
 
 [data-theme="dark"]{
 
-    --body_bg_before: #fbcd138e;
+    --body_bg_before: #fbcd1323;
 
-    --body_bg_after: #fbcd136c;
+    --body_bg_after: #fbcd131c;
 
     --text: #FFFAFA;
 
@@ -87,7 +87,7 @@
 
     --card_bg: #010507a5;
 
-    --card_border: gold;
+    --card_border: rgba(255, 217, 0, 0.400);
 
     --button_bg: black;
 
@@ -101,7 +101,7 @@
 
     --header-bg: black;
 
-    --header-border: gold;
+    --header-border: rgba(255, 217, 0, 0.400);
 
     --header-box-shadow:
 
@@ -125,7 +125,7 @@
 
     --classes-a-hover-box-shadow: 0 15px 30px #FBCC13;
 
-    --footer-border: rgba(233, 181, 11, 0.8);
+    --footer-border: rgba(255, 217, 0, 0.400);
 
     --classes-mark: black;
 
@@ -521,7 +521,9 @@ main{
 
     background:var(--button_bg);
 
-    box-shadow: var(--classes-a-box-shadow);
+    box-shadow:
+     2px 2px 7px rgba(163,177,198,.25),
+    -2px -2px 7px rgba(255,255,255,.7);
 
     transition:.35s;
 
@@ -674,7 +676,7 @@ body::before,body::after{
 
     box-shadow:  
     4px 4px 10px rgba(163,177,198,.25),
-    -4px -4px 10px rgba(255,255,255,.7);;
+    -4px -4px 10px rgba(255,255,255,.7);
 
 }
 
