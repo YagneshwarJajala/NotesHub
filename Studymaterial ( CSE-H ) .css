@@ -707,6 +707,13 @@ main{
 
 }
 
+.unit-btn:focus{
+
+    background-color: var(--heading-color);
+
+    color: var(--body-bg);
+}
+
 
 /* FOR SLOW ENTRANCE ANIMATION OF UNITS BUTTON*/
 
