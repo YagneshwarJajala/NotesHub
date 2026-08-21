@@ -81,11 +81,11 @@ for(let i=0;i<unitbtns.length;i++){
                     window.open(pdfpath,"_blank");
                 }
                 else{
-                    window.open("Error-page.html","_blank");
+                    window.open("Error-page.html","_self");
                 }
             })
             .catch(()=>{
-                    window.open("Error-page.html","_blank");
+                    window.open("Error-page.html","_self");
             });
         }
     )

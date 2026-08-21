@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">                
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NotesHub</title>
-    </head>
-    <body>
-        <div id="error-page" style="display:block;">
-            <h1>PDF IS NOT AVAILABLE YET.</h1><br><br>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesHub</title>
+    <link rel="stylesheet" href="Error-page.css">
+</head>
+<body>
+    <main id="error-page">
+        <div class="pdf-icon">
+            PDF
         </div>
-    </body>
+        <h1>
+            <span>PDF</span>
+            <span>WILL</span>
+            <span>BE</span>
+            <span>AVAILABLE</span>
+            <span>SOON.</span>
+        </h1>
+        <div class="typing-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <p>
+            We're working on adding this material.
+            <br>
+            Please check back soon.
+        </p>
+        <button onclick="window.history.back()">
+            <span>←</span>
+            Go Back
+        </button>
+
+    </main>
+
+</body>
+
 </html>
