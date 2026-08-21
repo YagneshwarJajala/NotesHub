@@ -73,7 +73,8 @@ for(let i=0;i<unitbtns.length;i++){
             e.stopPropagation();
             const unit=this.dataset.unit;
             console.log('You selected unit:'+unit);
-            const pdfpath=`${section}${subject}${unit}.pdf`;
+            const baseurl="https://noteshub-source.s3.us-east-1.amazonaws.com/";
+            const pdfpath=`${baseurl}${section}${subject}${unit}.pdf`;
             console.log("pdf path:"+pdfpath);
             window.open(pdfpath,"_blank");
         }
