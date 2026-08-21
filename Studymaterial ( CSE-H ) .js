@@ -76,16 +76,19 @@ for(let i=0;i<unitbtns.length;i++){
             const baseurl="https://noteshub-source.s3.us-east-1.amazonaws.com/";
             const pdfpath=`${baseurl}${section}${subject}${unit}.pdf`;
             console.log("pdf path:"+pdfpath);
-            fetch(pdfpath,{method:"Head"}).then(response=>{
+            fetch(pdfpath,{method:"HEAD"}).then(response=>{
                 if(response.ok){
                     window.open(pdfpath,"_blank");
+                    console.log('clicked1');
                 }
                 else{
-                    window.open("Error-page.html","_self");
+                    
+                    console.log('clicked2');
                 }
             })
             .catch(()=>{
-                    window.open("Error-page.html","_self");
+                   
+                    console.log('clicked3');
             });
         }
     )

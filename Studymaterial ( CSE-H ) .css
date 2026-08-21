@@ -706,12 +706,12 @@ main{
     transform: translate(-50%,-50%) scale(1);
 
 }
-
-.unit-btn:focus{
+.unit-btn:focus{  /*Focus for button when clicked added after error page*/
 
     background-color: var(--heading-color);
 
     color: var(--body-bg);
+
 }
 
 
