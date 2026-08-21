@@ -76,7 +76,17 @@ for(let i=0;i<unitbtns.length;i++){
             const baseurl="https://noteshub-source.s3.us-east-1.amazonaws.com/";
             const pdfpath=`${baseurl}${section}${subject}${unit}.pdf`;
             console.log("pdf path:"+pdfpath);
-            window.open(pdfpath,"_blank");
+            fetch(pdfpath,{method:"Head"}).then(response=>{
+                if(response.ok){
+                    window.open(pdfpath,"_blank");
+                }
+                else{
+                    window.open("Error-page.html","_blank");
+                }
+            })
+            .catch(()=>{
+                    window.open("Error-page.html","_blank");
+            });
         }
     )
 }
