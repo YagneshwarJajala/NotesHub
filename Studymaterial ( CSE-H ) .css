@@ -213,7 +213,7 @@ header{
 
     -webkit-backdrop-filter: blur(12px);
 
-    position:sticky;
+    position: fixed;/*for scroll-away*/
 
     top: 0;
 
@@ -389,6 +389,8 @@ main{
     max-width:1200px;
 
     margin:60px auto;
+
+    padding-top: 100px; /*for scroll-away behaviour*/
 
 }
 

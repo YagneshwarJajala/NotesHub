@@ -79,3 +79,15 @@ for(let i=0;i<unitbtns.length;i++){
         }
     )
 }
+
+/* SCROLL AWAY BEHAVIOUR */
+
+const logo=document.querySelector('.logo');
+window.addEventListener("scroll", () =>{
+    if(window.scrollY>450){
+        logo.style.display="none";
+    }
+    else{
+        logo.style.display="block";
+    }
+});
