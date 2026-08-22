@@ -82,12 +82,12 @@ for(let i=0;i<unitbtns.length;i++){
                     console.log('clicked1');
                 }
                 else{
-                    
+                    window.open("Error-page.html","_self");
                     console.log('clicked2');
                 }
             })
             .catch(()=>{
-                   
+                   window.open("Error-page.html","_self");
                     console.log('clicked3');
             });
         }
